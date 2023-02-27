@@ -99,6 +99,8 @@ local function register_ftdetect()
 end
 
 function M.setup(opts)
+	vim.deprecate("minijackson/epics.nvim", "epics-extensions/epics.nvim", "never", "epics.nvim")
+
 	vim.validate { opts = { opts, "table" } }
 
 	for given_key, _ in pairs(opts) do
